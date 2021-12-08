@@ -7,6 +7,9 @@ import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.Random;
 
+/*
+Why do I feel like this is actually skipping the results of many things?
+ */
 public class Experiment implements Runnable{
 
     public static void main(String[] args) throws FileNotFoundException {
