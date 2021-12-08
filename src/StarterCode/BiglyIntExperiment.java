@@ -27,6 +27,7 @@ public class BiglyIntExperiment {
     public final static String[] METHOD_NAMES = { "Regular", "Karatsuba", "Java's BigInteger" };
     
     public static void main(String[] args) {
+        long start = System.currentTimeMillis();
         try {
             // Open the file for saving
             PrintWriter out = new PrintWriter(FILE_NAME);
@@ -77,7 +78,10 @@ public class BiglyIntExperiment {
             System.err.println("Can't open file for saving results: " + FILE_NAME);
             System.err.println("   Message: " + e.getMessage());
         }
+        long end = System.currentTimeMillis();
+        System.out.println("Time for Calculations: " + ((end - start) / (1000 * 60)));
     }
+
 
     // Run a single experiment for the given size and using the specified method
     // Returns the time taken in nanoseconds
