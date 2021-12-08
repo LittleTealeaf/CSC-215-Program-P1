@@ -21,8 +21,7 @@ import java.io.PrintWriter;
 import java.io.FileNotFoundException;
 
 public class BiglyIntExperiment {
-    public final static int NUM_REPS = 1000;
-    public final static int MIN_DIGITS = 1, MAX_DIGITS = 501;
+    public final static int NUM_REPS = 100;
     public final static String FILE_NAME = "results.csv";
     public final static double CUT_OFF_TIME = 1;  // In seconds
     public final static String[] METHOD_NAMES = { "Regular", "Karatsuba", "Java's BigInteger" };
@@ -41,12 +40,14 @@ public class BiglyIntExperiment {
             boolean[] ttl = new boolean[METHOD_NAMES.length];  // Default is FALSE for each method
             
             // Now try various sizes
-            for (int s = MIN_DIGITS; s < MAX_DIGITS; s++) {
-                out.print(s);
+            int digits = 10;
+            while(digits < 500000) {
+                digits = (int) ((double) digits * 1.5);
+                out.print(digits);
 
                 // Now try all the different methods
                 for (int m = 0; m < METHOD_NAMES.length; m++) {
-                    System.out.println("Method: " + METHOD_NAMES[m] + " Size: " + s);
+                    System.out.println("Method: " + METHOD_NAMES[m] + " Size: " + digits);
                     if (ttl[m]) {
                         // This method has taken too long already, skip it
                         System.out.println("   Skipping this method");
@@ -59,9 +60,9 @@ public class BiglyIntExperiment {
 
                     for (int r = 0; r < NUM_REPS; r++) {
                         // For each rep, create two random numbers of given size and the numbers for them
-                        totalTime += runExperiment(s, m);
+                        totalTime += runExperiment(digits, m);
                     }
-                    
+
                     double aveTime = (double) totalTime / (double) NUM_REPS * 1e-9;  // Convert to average time in Seconds
                     out.print(", " + aveTime);
                     if (aveTime > CUT_OFF_TIME)
@@ -96,6 +97,7 @@ public class BiglyIntExperiment {
 
         // Get the end time
         long endTime = System.nanoTime();
+
 
         return endTime - startTime;  // Return the time taken for this experiment
     }
