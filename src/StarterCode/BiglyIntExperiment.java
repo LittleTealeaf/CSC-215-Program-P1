@@ -21,7 +21,7 @@ import java.io.PrintWriter;
 import java.io.FileNotFoundException;
 
 public class BiglyIntExperiment {
-    public final static int NUM_REPS = 10;
+    public final static int NUM_REPS = 1000;
     public final static String FILE_NAME = "results.csv";
     public final static double CUT_OFF_TIME = 1;  // In seconds
     public final static String[] METHOD_NAMES = { "Regular", "Karatsuba", "Java's BigInteger" };
@@ -40,7 +40,7 @@ public class BiglyIntExperiment {
             boolean[] ttl = new boolean[METHOD_NAMES.length];  // Default is FALSE for each method
             
             // Now try various sizes
-            for (int s = 10; s < 20; s++) {
+            for (int s = 10; s < 1000; s++) {
                 out.print(s);
 
                 // Now try all the different methods
