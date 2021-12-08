@@ -22,7 +22,7 @@ import java.io.FileNotFoundException;
 
 public class BiglyIntExperiment {
     public final static int NUM_REPS = 1000;
-    public final static int MIN_DIGITS = 10, MAX_DIGITS = 500;
+    public final static int MIN_DIGITS = 1, MAX_DIGITS = 501;
     public final static String FILE_NAME = "results.csv";
     public final static double CUT_OFF_TIME = 1;  // In seconds
     public final static String[] METHOD_NAMES = { "Regular", "Karatsuba", "Java's BigInteger" };
@@ -83,11 +83,16 @@ public class BiglyIntExperiment {
     private static long runExperiment(int size, int method) {
         // Create two random numbers of the given size and the BiglyInt
         //   See the BiglyIntDemo on how to create two numbers of the particular method (0,1,2)
+        BiglyInt numOne = BiglyIntFactory.createBiglyInt(BiglyIntFactory.generateNumber(size,true),method);
+        BiglyInt numTwo = BiglyIntFactory.createBiglyInt(BiglyIntFactory.generateNumber(size,true),method);
+
 
         // Get the start time
         long startTime = System.nanoTime();
 
         // Multiply the two numbers (see the BiglyIntDemo)
+        numOne.multiply(numTwo);
+
 
         // Get the end time
         long endTime = System.nanoTime();
