@@ -57,8 +57,8 @@ public class BiglyIntExperiment {
                     }
 
                     // Run the experiment for one method and the given size
+//                    double aveTime = new Experiment(m,digits,NUM_REPS,3).runExperiment();
                     long totalTime = 0;
-
                     for (int r = 0; r < NUM_REPS; r++) {
                         // For each rep, create two random numbers of given size and the numbers for them
                         totalTime += runExperiment(digits, m);
