@@ -22,12 +22,12 @@ public class BiglyIntFactory {
      * @returns A BiglyInt of the given type and value
      **/
     public static BiglyInt createBiglyInt(String val, int type) {
-        switch (type) {
-        case 0: return new BiglyIntA(val);
-        case 1: return new BiglyIntB(val);
-        case 2: return new BiglyIntC(val);
-        default: return null;
-        }
+        return switch (type) {
+            case 0 -> new BiglyIntA(val);
+            case 1 -> new BiglyIntB(val);
+            case 2 -> new BiglyIntC(val);
+            default -> null;
+        };
     }
 
     /**
@@ -36,7 +36,7 @@ public class BiglyIntFactory {
      * @param positiveOnly If true, number is not signed.  If false, it can also inlcude a + or - sign in front
      **/
     public static String generateNumber(int length, boolean positiveOnly) {
-        StringBuilder result = null;
+        StringBuilder result;
         
         if (!positiveOnly) {
             result = new StringBuilder(length+1);
