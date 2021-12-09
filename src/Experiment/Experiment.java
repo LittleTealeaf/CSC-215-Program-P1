@@ -13,7 +13,7 @@ Why do I feel like this is actually skipping the results of many things?
 public class Experiment implements Runnable{
 
     public static void main(String[] args) throws FileNotFoundException {
-        new Experiment(6,500000,100,n -> ((int) Math.ceil(n * 1.5)),new PrintStream("results4.csv")).runExperiment();
+        new Experiment(6,500000,100,n -> ((int) Math.ceil(n * 1.5)),new PrintStream("results5.csv")).runExperiment();
     }
 
     private static final boolean USE_NEGATIVE = false;
