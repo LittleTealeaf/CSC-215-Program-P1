@@ -13,7 +13,7 @@ Why do I feel like this is actually skipping the results of many things?
 public class Experiment implements Runnable{
 
     public static void main(String[] args) throws FileNotFoundException {
-        new Experiment(10,500000,5000,n -> ((int) Math.ceil(n * 1.5)),new PrintStream("results3.csv")).runExperiment();
+        new Experiment(6,500000,100,n -> ((int) Math.ceil(n * 1.5)),new PrintStream("results3.csv")).runExperiment();
     }
 
     private static final boolean USE_NEGATIVE = false;
@@ -80,11 +80,9 @@ public class Experiment implements Runnable{
     private void updateString() {
         int count = digits - lastDigits;
         for(int i = 0; i < intStrings.length; i++) {
-            char[] add = new char[count];
-            for(int j = 0; j < add.length; j++) {
-                add[j] = (char) ('1' + random.nextInt(9));
+            for(int j = 0; j < count; j++) {
+                intStrings[i].append((char) ('1' + random.nextInt(9)));
             }
-            intStrings[i].append(add);
         }
     }
 
@@ -107,9 +105,9 @@ public class Experiment implements Runnable{
                 }
                 int b = a + trial;
                 while(integers[i][a] == null || integers[i][b] == null);
-                long start = System.currentTimeMillis();
+                long start = System.nanoTime();
                 integers[i][a].multiply(integers[i][b]);
-                long end = System.currentTimeMillis();
+                long end = System.nanoTime();
                 time[i] += (end - start);
             }
         }
