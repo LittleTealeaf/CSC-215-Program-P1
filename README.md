@@ -1,6 +1,6 @@
 # Program-P1
 Integer Multiplication Experiment
-
+by Thomas Kwashnak, Emily Balboni, and Priscilla Esteves
 
 ## Development Notes
-Java 17, primarily used with Intellij 2021
+Experiment uses Java 17, run on IntelliJ 2021
