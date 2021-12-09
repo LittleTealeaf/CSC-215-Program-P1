@@ -5,6 +5,10 @@ import StarterCode.BiglyIntA;
 import StarterCode.BiglyIntB;
 import StarterCode.BiglyIntC;
 
+/**
+ * STUFF
+ * @author Thomas Kwashnak
+ */
 public enum Algorithm {
     A("Default", BiglyIntA::new),
     B("Karatsuba", BiglyIntB::new),

@@ -1,8 +1,8 @@
 package StarterCode;
-/**********
+/**
  * BiglyIntExperiment
  * Author: Christian Duncan
- * Modified by: ...
+ * Modified by: Thomas Kwashnak, Emily Balboni and Priscilla Esteves
  *
  * This class performs a simple experiment on a few BigInteger (BiglyInt) implementations of
  * the integer multiplication algorithm.
@@ -16,10 +16,14 @@ package StarterCode;
  *    2) Make it work for the correct sizes
  *    3) Make it perform multiple repetitions for a given size and method
  *    4) Make it actually run a single experiment (create two numbers, multiply them, measure time taken)
- ***********/
+ * @author Thomas Kwashnak
+ * @author Emily Balboni
+ * @author Priscilla Esteves
+ *
+ **/
 import java.io.PrintWriter;
 import java.io.FileNotFoundException;
-
+@Deprecated
 public class BiglyIntExperiment {
     public final static int NUM_REPS = 100;
     public final static String FILE_NAME = "results.csv";
@@ -87,6 +91,7 @@ public class BiglyIntExperiment {
     // Returns the time taken in nanoseconds
     private static long runExperiment(int size, int method) {
         // Create two random numbers of the given size and the BiglyInt
+
         //   See the BiglyIntDemo on how to create two numbers of the particular method (0,1,2)
         BiglyInt numOne = BiglyIntFactory.createBiglyInt(BiglyIntFactory.generateNumber(size,true),method);
         BiglyInt numTwo = BiglyIntFactory.createBiglyInt(BiglyIntFactory.generateNumber(size,true),method);
