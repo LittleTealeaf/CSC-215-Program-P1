@@ -1,11 +1,11 @@
 package StarterCode;
-/**********
+/**
  * BiglyIntTester
  * Author: Christian Duncan
  *
  * This class tests the BiglyInt implementations.
  * It compares each implementation with the result of using BigInteger from Java APIs
- ***********/
+ */
 import java.math.BigInteger;
 
 public class BiglyIntTester {

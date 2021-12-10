@@ -3,6 +3,11 @@ package FirstThreading;
 import StarterCode.BiglyInt;
 
 @Deprecated
+/**
+ * @deprecated use the algorithm in {@link Experiment.Experiment}.
+ * (Basically me just not wanting to comment out everything that I specifically decided to redo)
+ * @author Thomas Kwashnak
+ */
 public class DataCollector implements Runnable {
     private BiglyInt[] integers;
     private int trials, currentTrial;

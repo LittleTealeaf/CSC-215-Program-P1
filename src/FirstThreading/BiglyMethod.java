@@ -2,6 +2,11 @@ package FirstThreading;
 
 import StarterCode.*;
 
+/**
+ * Basically delegates the different BiglyInt methods through an Enum with factories
+ * @author Thomas Kwashnak
+ * @deprecated While it still is essentially the same thing, a new version was written in the Experiment package
+ */
 @Deprecated
 public enum BiglyMethod {
     A(BiglyIntA::new, "Regular"),
@@ -30,3 +35,4 @@ public enum BiglyMethod {
         BiglyInt generate(String val);
     }
 }
+

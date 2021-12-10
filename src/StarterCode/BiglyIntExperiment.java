@@ -1,28 +1,27 @@
 package StarterCode;
+
+import java.io.PrintWriter;
+import java.io.FileNotFoundException;
+
 /**
  * BiglyIntExperiment
- * Author: Christian Duncan
- * Modified by: Thomas Kwashnak, Emily Balboni and Priscilla Esteves
  *
  * This class performs a simple experiment on a few BigInteger (BiglyInt) implementations of
  * the integer multiplication algorithm.
- *    0) n^2 algorithm
- *    1) Karatsuba's algorithm
- *    2) Java's BigInteger version - should be most efficient.
+ *    <br>0) n^2 algorithm
+ *    <br>1) Karatsuba's algorithm
+ *    <br>2) Java's BigInteger version - should be most efficient.
  *
- * This experiment uses the following approach: Each row is a different size, each column a different method
- * TO DO:
- *    1) Edit these comments!
- *    2) Make it work for the correct sizes
- *    3) Make it perform multiple repetitions for a given size and method
- *    4) Make it actually run a single experiment (create two numbers, multiply them, measure time taken)
+ * <br>
+ * <br>
+ * This class is kept here, since it was modified to correctly work by the team as a whole (Before Thomas decided to attempt multithreading)
+ *
  * @author Thomas Kwashnak
  * @author Emily Balboni
  * @author Priscilla Esteves
- *
- **/
-import java.io.PrintWriter;
-import java.io.FileNotFoundException;
+ * @author Christian Duncan (Original Author)
+ * @deprecated Implementation used in data collection located in {@link Experiment.Experiment}
+ */
 @Deprecated
 public class BiglyIntExperiment {
     public final static int NUM_REPS = 100;
