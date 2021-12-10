@@ -29,6 +29,11 @@ import java.util.Random;
  *     and once there are no more to be done (or at least, there's a thread doing each one), they then do the same thing for each of the individual
  *     calculations for each method.
  *     (Yes this got wordy, but HOPEFULLY I comment better below)
+ *
+ *
+ *     <br><br><br>
+ *     Yes, I do realize that I can optimize it more
+ *     and yes, I wil be doing that during my free time... (Instead of maybe doing stuff I actually should but we're going to ignore that)
  * @author Thomas Kwashnak
  */
 public class Experiment implements Runnable{
