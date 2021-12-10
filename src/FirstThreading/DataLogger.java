@@ -1,7 +1,8 @@
-package Main;
+package FirstThreading;
 
 import java.io.*;
 
+@Deprecated
 public class DataLogger {
 
     public static final int THREAD_COUNT = 1;

@@ -1,12 +1,12 @@
-package Main;
+package FirstThreading;
 
 import StarterCode.BiglyInt;
 
 import java.io.IOException;
 import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.util.Random;
 
+@Deprecated
 public class Experiment {
 
     private static boolean USE_NEGATIVE = false;

@@ -1,7 +1,8 @@
-package Main;
+package FirstThreading;
 
 import StarterCode.*;
 
+@Deprecated
 public enum BiglyMethod {
     A(BiglyIntA::new, "Regular"),
     B(BiglyIntB::new, "Karatsuba"),

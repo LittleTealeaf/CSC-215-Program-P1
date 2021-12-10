@@ -1,7 +1,8 @@
-package Main;
+package FirstThreading;
 
 import StarterCode.BiglyInt;
 
+@Deprecated
 public class DataCollector implements Runnable {
     private BiglyInt[] integers;
     private int trials, currentTrial;
