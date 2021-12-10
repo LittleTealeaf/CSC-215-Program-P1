@@ -7,6 +7,7 @@ by Thomas Kwashnak, Emily Balboni, and Priscilla Esteves
 ## Experiment Overview
  - Used Data: Found at [Collected Data.csv](Collected%20Data.csv)
  - Method used to collect the data: found at [Experiment.java](src/Experiment/Experiment.java)
+ - An after-the-fact trial was completed on a more powerful computer. This took literal minutes to do the same thing. [Collected Data (Desktop).csv](Collected%20Data%20(Desktop).csv)
 
 
 ## Running this Program
