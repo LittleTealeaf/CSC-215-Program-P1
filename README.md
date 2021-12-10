@@ -5,15 +5,8 @@ by Thomas Kwashnak, Emily Balboni, and Priscilla Esteves
 *This is a markdown file, so viewing on GitHub or a Markdown compatible viewer is advised.* Repository can be found at [link](https://github.com/CSC-215-Coding-Assignments/Program-P1)
 
 ## Experiment Overview
-
-
-
-
-
-
-
-
-
+ - Used Data: Found at [Collected Data.csv](Collected%20Data.csv)
+ - Method used to collect the data: found at [Experiment.java](src/Experiment/Experiment.java)
 
 
 ## Running this Program
